@@ -61,13 +61,12 @@
 			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
 			<scope>provided</scope>
 		</dependency>
-	      <!-- Dependency on the EJB module so we can use it's services if needed -->
-      <dependency>
-         <groupId>org.jboss.as.tests</groupId>
-         <artifactId>objectmessage-ear-ejb</artifactId>
-         <type>ejb</type>
-         <scope>provided</scope>
-      </dependency>
+         <dependency>
+            <groupId>org.jboss.as.tests</groupId>
+            <artifactId>objectmessage-ear-ejb</artifactId>
+            <type>ejb</type>
+            <scope>provided</scope>
+         </dependency>
    </dependencies>
 
    <build>
