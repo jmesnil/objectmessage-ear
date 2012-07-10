@@ -1,24 +1,16 @@
 package org.jboss.as.quickstarts.mdb;
 
 import java.util.logging.Logger;
+
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
-import javax.jms.TextMessage;
 
+import org.jboss.as.quickstarts.MyResource;
 
-/**
- * <p>
- * A simple Message Driven Bean that asynchronously receives and processes the
- * messages that are sent to the queue.
- * </p>
- * 
- * @author Serge Pagop (spagop@redhat.com)
- * 
- */
 @MessageDriven(name = "HelloWorldMDB", activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
 		@ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/myQueue"),
@@ -36,7 +28,10 @@ public class HelloWorldMDB implements MessageListener {
 		try {
 			if (rcvMessage instanceof ObjectMessage) {
 				msg = (ObjectMessage) rcvMessage;
-				LOGGER.info("Received Message: " + msg.getObject());
+				Object o = msg.getObject();
+				LOGGER.info("Received object: " + o);
+				MyResource res = (MyResource)msg.getObject();
+				LOGGER.info("Received my resource: " + res);
 			} else {
 				LOGGER.warning("Message of wrong type: "
 						+ rcvMessage.getClass().getName());

@@ -28,6 +28,11 @@
       <!-- Depend on the ejb module and war so that we can package them -->
       <dependency>
          <groupId>org.jboss.as.tests</groupId>
+         <artifactId>objectmessage-ear-commons</artifactId>
+         <type>jar</type>
+      </dependency>
+      <dependency>
+         <groupId>org.jboss.as.tests</groupId>
          <artifactId>objectmessage-ear-web</artifactId>
          <type>war</type>
       </dependency>

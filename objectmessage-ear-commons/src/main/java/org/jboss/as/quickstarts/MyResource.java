@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.mdb;
+package org.jboss.as.quickstarts;
 
 import java.io.Serializable;
 

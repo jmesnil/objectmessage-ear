@@ -9,10 +9,10 @@
       <version>7.1.1-SNAPSHOT</version>
    </parent>
 
-   <artifactId>objectmessage-ear-ejb</artifactId>
-   <packaging>ejb</packaging>
+   <artifactId>objectmessage-ear-commons</artifactId>
+   <packaging>jar</packaging>
 
-   <name>ObjectMessagek EAR: EJB Module</name>
+   <name>ObjectMessagek EAR: Commons Module</name>
 
    <url>http://jboss.org/jbossas</url>
    <licenses>
@@ -42,25 +42,6 @@
          </dependency>
       </dependencies>
    </dependencyManagement>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.jboss.spec.javax.jms</groupId>
-			<artifactId>jboss-jms-api_1.1_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.spec.javax.ejb</groupId>
-			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
-         <dependency>
-            <groupId>org.jboss.as.tests</groupId>
-            <artifactId>objectmessage-ear-commons</artifactId>
-            <type>jar</type>
-            <scope>provided</scope>
-         </dependency>
-   	</dependencies>
 
    <build>
       <plugins>

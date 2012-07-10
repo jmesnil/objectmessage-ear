@@ -17,6 +17,7 @@
       </license>
    </licenses>
     <modules>
+        <module>objectmessage-ear-commons</module>
         <module>objectmessage-ear-ejb</module>
         <module>objectmessage-ear-web</module>
         <module>objectmessage-ear-ear</module>
@@ -41,6 +42,13 @@
     <dependencyManagement>
         <dependencies>
 
+            <dependency>
+                <groupId>org.jboss.as.tests</groupId>
+                <artifactId>objectmessage-ear-commons</artifactId>
+                <version>7.1.1-SNAPSHOT</version>
+                <type>jar</type>
+            </dependency>
+            
             <!-- Define the version of the EJB jar so that we don't need 
                 to repeat ourselves in every module -->
             <dependency>

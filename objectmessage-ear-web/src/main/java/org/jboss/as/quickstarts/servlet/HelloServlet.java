@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.jboss.as.quickstarts.mdb.MyResource;
+import org.jboss.as.quickstarts.MyResource;
+
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
