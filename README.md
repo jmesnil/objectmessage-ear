@@ -1,5 +1,9 @@
 # EAR application to check that JMS ObjectMessage works as expected in AS7.
 
+* Use case for https://issues.jboss.org/browse/AS7-1271
+
+## Scenario
+
 * instance of MyResource class is used as the JMS ObjectMessage payload
   * put inside a JAR in EAR's lib/ directory
 * a Servlet send a JMS message with a MyResource instance
