@@ -13,13 +13,21 @@
 
 ## Instructions
 
-* Start AS7 with the standalone-full configuration:
+1. Start AS7 with the standalone-full configuration
 
-$ ${JBOSS_HOME}/bin/standalone.sh -c standalone-full.xml
 
-* Deploy the EAR:
+        $ ${JBOSS_HOME}/bin/standalone.sh -c standalone-full.xml
 
-     $ mvn clean package jboss-as:deploy
 
- Then go to http://localhost:8080/objectmessage-ear-web/hello  
- And check in the AS7 logs that the HelloWorldMDB has received the ObjectMessage with the MyResource payload
+* Deploy the EAR
+
+        $ mvn clean package jboss-as:deploy
+
+
+  Then go to [http://localhost:8080/objectmessage-ear-web/hello](http://localhost:8080/objectmessage-ear-web/hello)
+  and check in the AS7 logs that the HelloWorldMDB has received the ObjectMessage with the MyResource payload
+
+* Undeploy the EAR
+
+        $ mvn jboss-as:undeploy
+
